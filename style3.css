@@ -1,0 +1,96 @@
+body {
+  background-color: #f8f9fa;
+  background-image: url('bgq.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.logo{
+	width: 200px;
+}
+nav{
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav ul li{
+	display: inline-block;
+	list-style: none;
+	margin: 20px 15px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #555;
+	font-weight: 400;
+}
+
+.quiz-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9); 
+}
+
+h2 {
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#quiz-form {
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#quiz-form input[type="submit"] {
+  background-color: #02c39a; 
+  color: #fff; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#quiz-form input[type="submit"]:hover {
+  background-color: #028e78; 
+}
+
+@media (max-width: 576px) {
+  .quiz-container {
+    margin: 20px;
+  }
+}
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0; 
+  font-size: 14px;
+}
+
+footer p:hover {
+  color: #ffc107;
+}

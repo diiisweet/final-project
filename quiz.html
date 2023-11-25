@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Food Effects Quiz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel= "stylesheet" type="text/css" href = "style3.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap">
+  <style>
+    body {
+      font-family: Muli, sans-serif;
+    }
+    .quiz-container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-none">
+  <a class="navbar-brand" href="#"><img src = logo.png class= "logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="impact.html">Impact</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="quiz.html">Quiz</a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <div class="quiz-container">
+    <h2>Quiz: Effects of Fast Food</h2>
+    <form id="quiz-form">
+
+      <label for="q1">1. Which of the following health issues is commonly associated with excessive fast food consumption?</label>
+      <input type="radio" name="q1" value="a"> Obesity<br>
+      <input type="radio" name="q1" value="b"> Insomnia<br>
+      <input type="radio" name="q1" value="c"> Vitamin C deficiency<br>
+
+      <label for="q2">2. What nutrient is often found in high amounts in fast food, contributing to health problems?</label>
+      <input type="radio" name="q2" value="a"> Fiber<br>
+      <input type="radio" name="q2" value="b"> Sodium<br>
+      <input type="radio" name="q2" value="c"> Vitamin D<br>
+
+<label for="q3">3. How does frequent consumption of fast food contribute to the risk of heart disease?</label>
+<input type="radio" name="q3" value="a"> Increases cholesterol levels<br>
+<input type="radio" name="q3" value="b"> Boosts immune system<br>
+<input type="radio" name="q3" value="c"> Reduces blood pressure<br>
+
+<label for="q4">4. Which of the following is a common consequence of a diet high in fast food and low in nutrients?</label>
+<input type="radio" name="q4" value="a"> Improved metabolism<br>
+<input type="radio" name="q4" value="b"> Nutrient deficiency<br>
+<input type="radio" name="q4" value="c"> Enhanced cognitive function<br>
+
+<label for="q5">5. True or False: Fast food is generally low in fiber, a crucial component for digestive health.</label>
+<input type="radio" name="q5" value="true"> True<br>
+<input type="radio" name="q5" value="false"> False<br>
+
+<label for="q6">6. Which of the following is a potential consequence of excessive fast food consumption in children?</label>
+<input type="radio" name="q6" value="a"> Improved concentration<br>
+<input type="radio" name="q6" value="b"> Increased risk of obesity<br>
+<input type="radio" name="q6" value="c"> Stronger bones<br>
+
+<label for="q7">7. How can individuals mitigate the health effects of fast food?</label>
+<input type="radio" name="q7" value="a"> Eat fast food daily for variety<br>
+<input type="radio" name="q7" value="b"> Balance fast food with a nutrient-rich diet<br>
+<input type="radio" name="q7" value="c"> Avoid drinking water<br>
+
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+<footer>
+    <p>&copy; 2023 Impacts of Fast Food. Diana Yeshpenova. 221398@astanait.edu.kz</p>
+</footer>
+ <script>
+    document.getElementById("quiz-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const answers = {
+        q1: "a",
+        q2: "b",
+        q3: "a",
+        q4: "b",
+        q5: "true",
+        q6: "b",
+        q7: "b",
+      };
+
+      let score = 0;
+
+      
+      for (const question in answers) {
+        const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+        if (selectedAnswer) {
+          if (selectedAnswer.value === answers[question]) {
+            score++;
+          }
+        }
+      }
+      alert(`Your score: ${score} out of ${Object.keys(answers).length}`);
+    });
+  </script>
+
+</body>
+</html>

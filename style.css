@@ -1,0 +1,145 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.hero{
+	width: 100%;
+	min-height : 100vh;
+	background-image: url(bg.jpg);
+	background-position: center;
+	background-size: cover;
+	padding: 10px 10%;
+	overflow: hidden;
+}
+
+nav{
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo{
+	width: 200px;
+}
+nav ul li{
+	display: inline-block;
+	list-style: none;
+	margin: 10px 15px;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #555;
+	font-weight: 400;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-left: 100px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 100%;
+  padding: 10px 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.K2-pros-cons {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  max-width: 700px;
+  margin: 30px auto;
+  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.4);
+}
+.K2-pros-cons .heading {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 16px 24px;
+}
+.K2-pros-cons .pros-container .heading {
+  background: #02c39a;
+}
+.K2-pros-cons .cons-container .heading {
+  background: #e63946;
+}
+.K2-pros-cons .pros-container ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  padding-right: 16px;
+  color: #02c39a;
+  display: block;
+}
+.K2-pros-cons .cons-container ul li::before {
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  padding-right: 16px;
+  color: #e63946;
+  display: block;
+}
+.K2-pros-cons .pros-container,
+.K2-pros-cons .cons-container {
+  flex: 1;
+}
+.K2-pros-cons .pros {
+  border-right: 1px solid #eee;
+}
+.K2-pros-cons ul {
+  padding: 8px 0;
+  list-style: none;
+  margin: 0;
+}
+.K2-pros-cons ul li {
+  padding: 16px 32px;
+  font-size: 16px;
+  line-height: 2;
+  display: flex;
+}
+@media (max-width: 530px) {
+  .K2-pros-cons {
+    flex-direction: column;
+  }
+  .K2-pros-cons ul li:nth-of-type(2n) {
+    background: #eee;
+  }
+}
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0; 
+  font-size: 14px;
+}
+
+footer p:hover {
+  color: #ffc107; 
+}

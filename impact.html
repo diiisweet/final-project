@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Fast Food Effects on Health</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel= "stylesheet" type="text/css" href = "style1.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap">
+</head>
+<style>
+body {
+        font-family: 'Muli', serif;
+        background-color: #FFFCF0  ;
+}
+header {
+      background-color: #F7B504;
+      color: #2D2D2C;
+      text-align: center;
+      padding: 20px;
+    }
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .impact-card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-none">
+  <a class="navbar-brand" href="#"><img src = logo.png class= "logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="impact.html">Impact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="quiz.html">Quiz</a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  <header>
+    <h1>Impacts of Fast Food</h1>
+  </header>
+
+  <main>
+    <div class="impact-card" id="card1">
+      <h2>Obesity</h2>
+      <img src="obesity.jpg" alt="Obesity Image">
+      <p>Fast food consumption is linked to an increased risk of obesity due to high-calorie and low-nutrient content.</p>
+    </div>
+
+    <div class="impact-card" id="card2">
+      <h2>Heart <br> Disease</h2>
+      <img src="heart.jpg" alt="Heart Disease Image">
+      <br> <br><p>Excessive intake of fast food can contribute to the development of heart diseases by increasing cholesterol levels.</p>
+    </div>
+
+    <div class="impact-card" id="card3">
+      <h2>Nutrient Deficiency</h2>
+      <img src="nutri.jpg" alt="Nutrient Deficiency Image">
+      <p>A diet high in fast food and low in nutrients can lead to various health issues, including nutrient deficiencies.</p>
+    </div>
+<div class="impact-card" id="card4">
+      <h2>Diabetes</h2>
+      <img src="diabetes.jpg" alt="Diabetes Image">
+      <p>Regular consumption of fast food has been associated with an increased risk of developing type 2 diabetes.</p>
+    </div>
+
+    <div class="impact-card" id="card5">
+      <h2>High Blood Pressure</h2>
+      <img src="high.jpg" alt="High Blood Pressure Image">
+      <p>The high sodium content in fast food is a major contributor to elevated blood pressure levels in individuals.</p>
+    </div>
+
+    <div class="impact-card" id="card6">
+      <h2>Digestive Issues</h2>
+      <img src="digest.jpg" alt="Digestive Issues Image">
+      <p>Fast food, often low in fiber, can lead to digestive problems such as constipation and irregular bowel movements.</p>
+    </div>
+
+<a href="quiz.html" class="btn btn-primary">Take the Quiz</a> 
+
+  </main>
+<br> <br>
+
+<audio id="hoverSound">
+    <source src="hover.mp3" type="audio/mp3">
+  </audio>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+    document.querySelectorAll('.impact-card').forEach(function(card) {
+      card.classList.add('animate__animated', 'animate__fadeIn');
+    });
+
+    document.querySelectorAll('.impact-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+       
+        this.classList.toggle('key-pressed');
+        
+        this.classList.add('animate__animated', 'animate__bounceIn');
+        
+        setTimeout(() => {
+          this.classList.remove('animate__animated', 'animate__bounceIn');
+        }, 1000);
+      });
+
+      card.addEventListener('mouseover', function() {
+        this.classList.toggle('mouse-over');
+        document.getElementById('hoverSound').play();
+      });
+    });
+  });
+  </script>
+
+<footer>
+    <p>&copy; 2023 Impacts of Fast Food. Diana Yeshpenova. 221398@astanait.edu.kz</p>
+</footer>
+</body>
+</html>
